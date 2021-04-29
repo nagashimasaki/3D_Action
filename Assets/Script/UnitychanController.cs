@@ -7,8 +7,16 @@ public class UnitychanController : MonoBehaviour
     //Rigidbodyを変数に入れる
     Rigidbody rb;
 
-    [SerializeField]
-    private float jumpForce = 0;
+    //[SerializeField]
+    //private float jumpForce = 0;
+
+
+    [Header("ジャンプ力")]             
+    public float jumpPower;
+    [Header("地面判定用レイヤー")]
+    public LayerMask groundLayer;
+    private bool isGround;
+
 
     [Header("ユニティちゃんの動く速さ")]
     public float moveSpeed;
@@ -30,17 +38,20 @@ public class UnitychanController : MonoBehaviour
     void Update()
     {
         //スペースキーが押されたら
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
+        //if(Input.GetKeyDown(KeyCode.Space))
+        //{
             //jumpForce 変数に入っている値の数値分上に力を加える
-            rb.AddForce(transform.up * jumpForce);
-        }
+            //rb.AddForce(transform.up * jumpForce);
+        //}
 
         //UnitychanMovement メソッドを作る
         UnitychanMovement();
 
         //UnitychanTurn メソッドを作る
         UnitychanTurn();
+
+        // ジャンプ
+        Jump();
     }
 
     /// <summary>
@@ -63,4 +74,26 @@ public class UnitychanController : MonoBehaviour
         Quaternion turnRotation = Quaternion.Euler(0, turn, 0);
         rb.MoveRotation(rb.rotation * turnRotation);
     }
+
+    /// <summary>    
+	/// ジャンプ
+	/// </summary>
+	private void Jump()
+    {
+        //  Linecastでキャラの足元に地面があるか判定  地面があるときはTrueを返す
+        isGround = Physics.Linecast(transform.position + transform.up * 1, transform.position - transform.up * 0.3f, groundLayer);
+
+        //  着地していたとき、キー入力のJumpで反応（GetButton）スペースキー(GetKey)
+        if (Input.GetButtonDown("Jump") && isGround)
+        {
+            //  着地判定をfalse
+            isGround = false;
+
+            //  Jumpステートへ遷移してジャンプアニメを再生
+            //anim.Play("Jump");
+
+            //  AddForceにて上方向へ力を加える
+            rb.AddForce(Vector3.up * jumpPower);
+        }
+    }        
 }

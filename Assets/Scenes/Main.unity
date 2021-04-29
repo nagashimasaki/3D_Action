@@ -389,7 +389,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50d833b4266a5bf4bb049d4f0a66b1f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 300
+  jumpPower: 300
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 256
   moveSpeed: 7
   turnSpeed: 100
 --- !u!65 &368507698
@@ -425,7 +428,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 941340339}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &368507707
+--- !u!114 &368507705
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -433,6 +436,19 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 368507695}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00bdbbf2a866ef44ea8d27258ffeecb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+--- !u!114 &368507707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368507695}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6feee58e803f9e246af6c732bd629976, type: 3}
   m_Name: 
@@ -561,7 +577,7 @@ Transform:
   - {fileID: 1942484460}
   - {fileID: 1130514428}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &704306815
 GameObject:
@@ -861,7 +877,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 146d2755bbdd92c4493f838ceae50a40, type: 2}
     - target: {fileID: 11400000, guid: 412b92d4feeb9c548bfa98f62c4d1022, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 412b92d4feeb9c548bfa98f62c4d1022, type: 3}
       propertyPath: m_Enabled
@@ -1277,7 +1293,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1494316852
 GameObject:
@@ -1335,7 +1351,7 @@ Transform:
   m_LocalScale: {x: 2, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1513855149
 GameObject:
@@ -1397,7 +1413,7 @@ GameObject:
   - component: {fileID: 1613711345}
   - component: {fileID: 1613711344}
   - component: {fileID: 1613711343}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BattleGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1492,7 +1508,7 @@ GameObject:
   - component: {fileID: 1803122283}
   - component: {fileID: 1803122282}
   - component: {fileID: 1803122286}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: StartGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
