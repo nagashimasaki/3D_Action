@@ -7,10 +7,6 @@ public class UnitychanController : MonoBehaviour
     //Rigidbodyを変数に入れる
     Rigidbody rb;
 
-    //[SerializeField]
-    //private float jumpForce = 0;
-
-
     [Header("ジャンプ力")]             
     public float jumpPower;
     [Header("地面判定用レイヤー")]
@@ -37,13 +33,6 @@ public class UnitychanController : MonoBehaviour
 
     void Update()
     {
-        //スペースキーが押されたら
-        //if(Input.GetKeyDown(KeyCode.Space))
-        //{
-            //jumpForce 変数に入っている値の数値分上に力を加える
-            //rb.AddForce(transform.up * jumpForce);
-        //}
-
         //UnitychanMovement メソッドを作る
         UnitychanMovement();
 
@@ -88,9 +77,6 @@ public class UnitychanController : MonoBehaviour
         {
             //  着地判定をfalse
             isGround = false;
-
-            //  Jumpステートへ遷移してジャンプアニメを再生
-            //anim.Play("Jump");
 
             //  AddForceにて上方向へ力を加える
             rb.AddForce(Vector3.up * jumpPower);

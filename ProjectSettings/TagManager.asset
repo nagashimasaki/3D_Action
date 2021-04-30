@@ -4,7 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Prayer
+  - EnemyShell
+  - Enemy
   layers:
   - Default
   - TransparentFX
