@@ -18,15 +18,17 @@ public class Animation : MonoBehaviour
 	{
 		// 自分に設定されているAnimatorコンポーネントを習得する
 		animator = GetComponent<Animator>();
+
+		//Attack1Start メソッドの処理を実行する準備をする
+		Attack1Start();
+		//Attack1End メソッドの処理を実行する準備をする
+		Attack1End();
+
 	}
 
 	// 1フレームに1回コールされる
 	void Update()
 	{
-		Attack1Start();
-
-		Attack1End();
-
 		// 矢印下ボタンを押下している
 		if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.UpArrow))
         { 
@@ -65,17 +67,24 @@ public class Animation : MonoBehaviour
 		}
 	}
 
+	
+	/// <summary>
+	/// アニメーションイベント
+	/// </summary>
 	void Attack1Start()
 	{
+		//アニメーション開始と同時にColliderを付ける
 		capsuleCollider.enabled = true;
 	}
 
-	//アニメーションイベント
-	//アニメーションの終了と同時にColliderを消す
-	//アニメーションを攻撃から待機へ戻す
+	/// <summary>
+	/// アニメーションイベント
+	/// </summary>
 	void Attack1End()
 	{
+		//アニメーションの終了と同時にColliderを消す
 		capsuleCollider.enabled = false;
+		//アニメーションを攻撃から待機へ戻す
 		animator.SetBool("isAttack", false);
 	}
 }

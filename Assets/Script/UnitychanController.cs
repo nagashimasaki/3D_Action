@@ -7,6 +7,9 @@ public class UnitychanController : MonoBehaviour
     //Rigidbodyを変数に入れる
     Rigidbody rb;
 
+    //[SerializeField]
+    //private CapsuleCollider capsuleCollider;
+
     [Header("ジャンプ力")]             
     public float jumpPower;
     [Header("地面判定用レイヤー")]
@@ -81,5 +84,17 @@ public class UnitychanController : MonoBehaviour
             //  AddForceにて上方向へ力を加える
             rb.AddForce(Vector3.up * jumpPower);
         }
-    }        
+    }    
+
+    //public void Attack1Start()
+    //{
+        //コライダをONにする
+
+    //}
+
+    //public void Attack1End()
+    //{
+        //コライダをOFFにする
+
+    //}
 }
