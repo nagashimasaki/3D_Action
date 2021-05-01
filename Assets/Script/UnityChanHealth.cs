@@ -20,7 +20,7 @@ public class UnityChanHealth : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (gameObject.tag == "EnemyShell")
+        if (other.gameObject.CompareTag ( "EnemyShell"))
         {
             Debug.Log("ダメージ");
             unityChanHP -= 1;
