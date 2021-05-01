@@ -7,11 +7,20 @@ public class Radar : MonoBehaviour
     [SerializeField]
     private Transform target;
 
+    private void Start()
+    {
+        target = GameObject.FindGameObjectWithTag("Player").transform;
+    }
+
     private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            transform.root.LookAt(target);
+            if(target != null)
+            {
+                transform.root.LookAt(target);
+            }
+            
         }
     }
 }

@@ -1274,7 +1274,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 628303628}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 915f1725e1afe6f43ade29605bd730a7, type: 3}
   m_Name: 
@@ -2045,7 +2045,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1210931804}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 20
   m_Height: 2
@@ -2571,7 +2571,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1559968075}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 20
   m_Height: 2
@@ -2775,7 +2775,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1590563224}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 20
   m_Height: 2
@@ -2979,7 +2979,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1736285113}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 20
   m_Height: 2
@@ -3185,47 +3185,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyB
       objectReference: {fileID: 0}
-    - target: {fileID: 215280004505273496, guid: 23e9a7f44b46870458dfbd9787f3bd12,
-        type: 3}
-      propertyPath: m_TagString
-      value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 1139337419416064914, guid: 23e9a7f44b46870458dfbd9787f3bd12,
-        type: 3}
-      propertyPath: shotSound
-      value: 
-      objectReference: {fileID: 8300000, guid: d16114639c8984d47b93448c82620f09, type: 3}
-    - target: {fileID: 1139337419416064914, guid: 23e9a7f44b46870458dfbd9787f3bd12,
-        type: 3}
-      propertyPath: enemyShellPrefab
-      value: 
-      objectReference: {fileID: 134079353026411318, guid: 648918077461dcf4eaf0415f9bddc9e6,
-        type: 3}
-    - target: {fileID: 1169663737337431982, guid: 23e9a7f44b46870458dfbd9787f3bd12,
-        type: 3}
-      propertyPath: m_Height
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1169663737337431982, guid: 23e9a7f44b46870458dfbd9787f3bd12,
-        type: 3}
-      propertyPath: m_Radius
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1169663737337431982, guid: 23e9a7f44b46870458dfbd9787f3bd12,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2192150457531479295, guid: 23e9a7f44b46870458dfbd9787f3bd12,
         type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 368507695}
-    - target: {fileID: 3411130686673530549, guid: 23e9a7f44b46870458dfbd9787f3bd12,
-        type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
     - target: {fileID: 3553266886915423497, guid: 23e9a7f44b46870458dfbd9787f3bd12,
         type: 3}
       propertyPath: m_RootOrder
@@ -3281,21 +3245,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5222173177224517184, guid: 23e9a7f44b46870458dfbd9787f3bd12,
-        type: 3}
-      propertyPath: effectPrefab1
-      value: 
-      objectReference: {fileID: 100002, guid: e48c7d7ec43014ad882cf23f3bb48ac8, type: 3}
-    - target: {fileID: 5222173177224517184, guid: 23e9a7f44b46870458dfbd9787f3bd12,
-        type: 3}
-      propertyPath: effectPrefab2
-      value: 
-      objectReference: {fileID: 100002, guid: f7efb0d9df2264096af57128df85dddb, type: 3}
     - target: {fileID: 6595031306988033975, guid: 23e9a7f44b46870458dfbd9787f3bd12,
         type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 368507702}
+    - target: {fileID: 6787297089961852363, guid: 23e9a7f44b46870458dfbd9787f3bd12,
+        type: 3}
+      propertyPath: m_StoppingDistance
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23e9a7f44b46870458dfbd9787f3bd12, type: 3}
 --- !u!1 &1865707160

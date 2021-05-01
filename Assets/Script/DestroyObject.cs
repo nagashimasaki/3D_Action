@@ -22,8 +22,9 @@ public class DestroyObject : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //ぶつかった相手のTagにAttackという名前が付いていたら（条件）
-        if (CompareTag("Attack"))
+        if (other.gameObject.CompareTag("Attack"))
         {
+            Debug.Log("通過");
             //オブジェクトのHPを１ずつ減少させる
             objectHP -= 1;
 
