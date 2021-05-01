@@ -120,7 +120,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: bfab1af54360dff4a9aa049568358e5a, type: 2}
 --- !u!1 &58953229
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,7 +192,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 4d5d627b13a538348be73a56cc593615, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Attack
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4d5d627b13a538348be73a56cc593615, type: 3}
       propertyPath: m_RootOrder
@@ -2875,10 +2875,10 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!64 &1613711343
-MeshCollider:
+--- !u!65 &1613711343
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2887,10 +2887,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 12, y: 2.220446e-16, z: 12}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1613711344
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3081,7 +3080,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!64 &1803122282
 MeshCollider:
