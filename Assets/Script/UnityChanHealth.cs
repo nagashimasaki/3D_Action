@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UnityChanHealth : MonoBehaviour
 {
@@ -36,12 +37,16 @@ public class UnityChanHealth : MonoBehaviour
             {
                 GameObject effect2 = Instantiate(effectPrefab2, transform.position, Quaternion.identity);
                 Destroy(effect2, 1.0f);
-                Destroy(gameObject);
+                //Destroy(gameObject);
 
                 //プレイヤーを破壊せずに画面から見えなくする。プレイヤーを破壊すると、その時点でメモリー上から消えるので、以降のコードが実行されない
                 this.gameObject.SetActive(false); 
                 Invoke("GoToGameOver", 1.5f);
             }
         }
+    }
+    void GoToGameOver()
+    {
+        SceneManager.LoadScene("GameOver");
     }
 }
