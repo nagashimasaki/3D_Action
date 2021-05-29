@@ -1568,7 +1568,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &533538078
 Transform:
   m_ObjectHideFlags: 0
@@ -1577,7 +1577,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 533538077}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 55, y: 0, z: 15}
+  m_LocalPosition: {x: -300, y: 0, z: 80}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 124786883}
@@ -1954,6 +1954,50 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1710331829}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &691098483
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 691098485}
+  - component: {fileID: 691098484}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &691098484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691098483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc4824bf0d57c64d9893d6587f63689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skyboxChanger: {fileID: 1419233023}
+--- !u!4 &691098485
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691098483}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -299.84875, y: 0.6633944, z: 80}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 35
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &691184057
 GameObject:
   m_ObjectHideFlags: 0
@@ -3912,6 +3956,54 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 917698606}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1419233022
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1419233024}
+  - component: {fileID: 1419233023}
+  m_Layer: 0
+  m_Name: SkyboxChanger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1419233023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419233022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941989c1cef28ac43a2773f241c02472, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skyboxMaterials:
+  - {fileID: 2100000, guid: 39cace2863926444a9a78daa8ae26413, type: 2}
+  - {fileID: 2100000, guid: 93d43b027dc267444af7412b8e607dbd, type: 2}
+  - {fileID: 2100000, guid: d07d2172e76d3fa429e80a14d2ae3616, type: 2}
+  skyboxMaterialsIndex: 999
+--- !u!4 &1419233024
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419233022}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -299.84875, y: 0.6633944, z: 80}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 34
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1424494461
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4038,7 +4130,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1428378237}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -300, y: 1, z: 80}
+  m_LocalPosition: {x: -300, y: 0.5, z: 80}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4227,7 +4319,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1478686546
 Transform:
   m_ObjectHideFlags: 0
@@ -4259,7 +4351,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1494316853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7613,10 +7705,10 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 3.5
-  m_Acceleration: 8
+  m_Acceleration: 3
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 7
+  m_StoppingDistance: 8
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
